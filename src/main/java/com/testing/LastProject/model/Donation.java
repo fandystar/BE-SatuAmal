@@ -32,17 +32,17 @@ public class Donation {
 	@Column(name="id", unique = true)
 	private  String id;
 	
-	@Column
+	@Column(nullable=true)
 	@Temporal(TemporalType.DATE)
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date accepted_Date;
 	
-	@Column
+	@Column(nullable=true)
 	@Temporal(TemporalType.DATE)
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date given_Date;
 	
-	@Column
+	@Column(nullable=true)
 	private String photo;
 	
 	@JoinColumn(name = "user_id")

@@ -61,7 +61,7 @@ public class DonationController {
 			@RequestHeader(value="authorization") String token,
 			@RequestParam("accepted_Date") 	@DateTimeFormat(pattern = "yyyy-MM-dd") Date accepted_Date,
 			@RequestParam("given_Date")	@DateTimeFormat(pattern = "yyyy-MM-dd")Date given_Date,
-			@RequestParam("photo")MultipartFile photo,
+			@RequestParam(value="photo",required=false)MultipartFile photo,
 			@RequestParam("user_id") UUID user_id,
 			@RequestParam("recipient_id") String recipient_id
 			){
